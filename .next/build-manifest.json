@@ -1,27 +1,41 @@
 {
-  "devFiles": [
-    "static/development/dll/dll_b5225241d5758ce7bfd2.js"
-  ],
+  "devFiles": [],
   "pages": {
+    "/index": [
+      "static/runtime/webpack-838b392324e3598684b5.js",
+      "static/css/commons.90f390ea.chunk.css",
+      "static/chunks/commons.7d6bcdb940cf8d311f75.js",
+      "static/css/styles.a78586ff.chunk.css",
+      "static/chunks/styles.8062c8d9da329f086da2.js",
+      "static/runtime/main-0faa35720f053c905934.js"
+    ],
+    "/projects": [
+      "static/runtime/webpack-838b392324e3598684b5.js",
+      "static/css/commons.90f390ea.chunk.css",
+      "static/chunks/commons.7d6bcdb940cf8d311f75.js",
+      "static/css/styles.a78586ff.chunk.css",
+      "static/chunks/styles.8062c8d9da329f086da2.js",
+      "static/runtime/main-0faa35720f053c905934.js"
+    ],
     "/_app": [
-      "static/runtime/webpack.js",
-      "static/runtime/main.js"
+      "static/runtime/webpack-838b392324e3598684b5.js",
+      "static/css/commons.90f390ea.chunk.css",
+      "static/chunks/commons.7d6bcdb940cf8d311f75.js",
+      "static/runtime/main-0faa35720f053c905934.js"
     ],
     "/_error": [
-      "static/runtime/webpack.js",
-      "static/runtime/main.js"
-    ],
-    "/index": [
-      "static/runtime/webpack.js",
-      "static/css/styles.chunk.css",
-      "static/chunks/styles.js",
-      "static/runtime/main.js"
+      "static/runtime/webpack-838b392324e3598684b5.js",
+      "static/css/commons.90f390ea.chunk.css",
+      "static/chunks/commons.7d6bcdb940cf8d311f75.js",
+      "static/runtime/main-0faa35720f053c905934.js"
     ],
     "/": [
-      "static/runtime/webpack.js",
-      "static/css/styles.chunk.css",
-      "static/chunks/styles.js",
-      "static/runtime/main.js"
+      "static/runtime/webpack-838b392324e3598684b5.js",
+      "static/css/commons.90f390ea.chunk.css",
+      "static/chunks/commons.7d6bcdb940cf8d311f75.js",
+      "static/css/styles.a78586ff.chunk.css",
+      "static/chunks/styles.8062c8d9da329f086da2.js",
+      "static/runtime/main-0faa35720f053c905934.js"
     ]
   }
 }
