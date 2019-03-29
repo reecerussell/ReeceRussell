@@ -1,0 +1,20 @@
+.testimonials {
+    padding: 30px 0;
+}
+
+.testimonials .carousel {
+    min-height: 175px;
+}
+
+.testimonials .indicators {
+    position:relative;
+}
+
+.testimonials .indicators > li {
+    background-color: #000;
+    opacity: .3;
+}
+
+.testimonials .indicators > li.active {
+    opacity: 1;
+}

@@ -1,0 +1,28 @@
+html, body {
+    margin:0;
+    padding: 0;
+    font-family: 'Source Code Pro', monospace;
+}
+
+.background {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    left:20px;
+    margin-bottom: 20px;
+    width: calc(100% - 40px);
+    background-color: #f4f4f4;
+}
+
+.tab {
+    position: relative;
+    top: -5px;
+    height: 3px;
+    width: 10px;
+    background-color: #000;
+}
+
+a {
+    color: #000;
+    text-decoration: underline;
+}
