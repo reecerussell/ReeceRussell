@@ -1,8 +1,14 @@
 // next.config.js
 
-module.exports = {
-    target: 'serverless'
-  }
 
 const withCSS = require('@zeit/next-css')
-module.exports = withCSS()
+const withImages = require('next-images')
+const compose = require("next-compose")
+
+module.exports = compose([
+  [withCSS, {}],
+  [withImages, {}],
+  {
+    target: 'serverless'
+  }
+])

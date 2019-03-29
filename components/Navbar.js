@@ -13,8 +13,6 @@ export default class Navbar extends React.Component {
         if (path[0] !== '/')
             path = "/" + path.toLowerCase();
 
-        console.log("Path:", path);
-
         this.setState({path: path});
     }
 

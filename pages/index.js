@@ -5,6 +5,7 @@ import {Row, Col} from 'reactstrap';
 import Testimonials from '../components/Testimonials';
 import About from '../components/About';
 import Skills from '../components/Skills';
+import logo from '../static/images/logo.png';
 
 export default class Index extends React.Component {
 
@@ -13,7 +14,7 @@ export default class Index extends React.Component {
             <Layout>
                 <Row style={{ padding: "75px 0", borderBottom: "dotted 1px #000" }}>
                     <Col md="4">
-                        <img src="https://theweeklyminute.files.wordpress.com/2014/06/dsc05899.jpg" style={{ position: "relative", height: 300 }} />
+                        <img src={logo} style={{ position: "relative", width: "100%" }} title="'Narcissism' by Nathan Shaw" />
                     </Col>
                     <Col md="8">
                         <h1 className="display-4">
