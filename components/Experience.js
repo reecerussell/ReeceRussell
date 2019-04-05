@@ -4,7 +4,7 @@ import {Row, Col} from 'reactstrap'
 export default class Experience extends React.Component {
     render() {
         return (
-            <Row>
+            <Row style={{padding:"50px 0"}}>
                 <Col md="6">
                     <h3>Work</h3>
                     <div className="tab"></div>

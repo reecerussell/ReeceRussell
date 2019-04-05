@@ -7,7 +7,6 @@ import Skills from '../components/Skills';
 import logo from '../static/images/logo.png';
 import Experience from '../components/Experience';
 import fetch from 'isomorphic-unfetch';
-import Button from '../components/subComponents/Button';
 
 class Index extends React.Component {
 
@@ -33,7 +32,7 @@ class Index extends React.Component {
                         <Row>
                             <Col md="7">
                                 <p>
-                                    Welcome to my portfoli! I am a software developer, based in Milton Keynes.
+                                    Welcome to my portfolio! I am a software developer, based in Milton Keynes.
                                     </p>
                             </Col>
                         </Row>
@@ -44,7 +43,6 @@ class Index extends React.Component {
                                 <p>
                                     At the moment I am engaged to ASP.NET Core microservices and exploring GO.<br />
                                     This is my first online portfolio. Feel feel to look around and let me know what you think!
-                                    <Button>Hello</Button>
                                     </p>
                             </Col>
                             <Col sm="5">

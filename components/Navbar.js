@@ -27,7 +27,7 @@ export default class Navbar extends React.Component {
                         <a href="https://github.com/reecerussell">Github</a>
                     </li>
                     <li className={(this.state.path === "/projects" ? "active" : "")}>
-                        <a href="/projects">Projects</a>
+                        <a href="/">Almost</a>
                     </li>
                 </ul>
             </nav>
