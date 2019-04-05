@@ -1,0 +1,28 @@
+.btn-source {
+    background-color:transparent;
+    color:#000;
+    text-decoration: none;
+    border-radius: 20px;
+    border: 2px solid #000;
+    padding: 8px 18px;
+    font-size: 15px;
+    animation: none;
+}
+
+.btn-source:hover {
+    color:#fff;
+    text-decoration: underline;
+    animation: fadeIn .2s ease-in-out;
+    animation-fill-mode: forwards
+}
+
+@keyframes fadeIn {
+    0% {
+        background-color: transparent;
+        color:#000;
+    }
+    100% {
+        background-color: #000;
+        color:#fff;
+    }
+}

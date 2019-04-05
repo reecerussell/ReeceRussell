@@ -7,9 +7,9 @@ export default class About extends React.Component {
         return (
             <Row id="about">
                 <Col>
-                    <h4>
+                    <h3>
                         About me
-                    </h4>
+                    </h3>
                     <div className="tab"></div>
                     <p className="text-justify">
                         I am an apprentice software developer at a small company called Prominent Media while studying software development. My primary focus is on ASP.NET web applications, working with C# and SQL. From time to time, I explore the realms of Xamarin and working with web sockets and restful APIs. However, ASP.NET Core is my current obsession.

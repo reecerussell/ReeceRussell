@@ -2,19 +2,29 @@ import React from 'react';
 import Projects from '../components/Projects';
 import Layout from '../components/Layout';
 import {Row, Col} from 'reactstrap';
-import Testimonials from '../components/Testimonials';
 import About from '../components/About';
 import Skills from '../components/Skills';
 import logo from '../static/images/logo.png';
+import Experience from '../components/Experience';
+import fetch from 'isomorphic-unfetch';
+import Button from '../components/subComponents/Button';
 
-export default class Index extends React.Component {
+class Index extends React.Component {
+
+    constructor(props) {
+        super(props);
+
+        this.state = {
+            projects: []
+        };
+    }
 
     render() {
         return (
             <Layout>
                 <Row style={{ padding: "75px 0", borderBottom: "dotted 1px #000" }}>
                     <Col md="4">
-                        <img src={logo} style={{ position: "relative", width: "100%" }} title="'Narcissism' by Nathan Shaw" />
+                        <img src={logo} style={{ width: "100%" }} title="'Narcissism' by Nathan Shaw" />
                     </Col>
                     <Col md="8">
                         <h1 className="display-4">
@@ -34,6 +44,7 @@ export default class Index extends React.Component {
                                 <p>
                                     At the moment I am engaged to ASP.NET Core microservices and exploring GO.<br />
                                     This is my first online portfolio. Feel feel to look around and let me know what you think!
+                                    <Button>Hello</Button>
                                     </p>
                             </Col>
                             <Col sm="5">
@@ -45,10 +56,28 @@ export default class Index extends React.Component {
                 </Row>
                 <About />
                 <Skills />
-                <Testimonials />
-                <Projects />
+                <Projects limit="2" projects={this.props.projects} />
+                <Experience />
             </Layout>
 
         )
     }
 }
+
+Index.getInitialProps = async function () {
+    const res = await fetch("https://go.reecerussell.com", {
+        headers: {
+            "Requested-By": "reecerussell.com"
+        }
+    });
+
+    if (res.status != 200)
+        throw new Error("Failed to get content");
+
+    const data = await res.json();
+    const projects = data.projects;
+
+    return {projects};
+}
+
+export default Index;
