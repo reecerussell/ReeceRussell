@@ -5,7 +5,7 @@ import '../static/css/footer.css';
 export default class Footer extends React.Component {
     render () {
         return (
-            <footer className="container" style={{backgroundColor: "black", color: "white"}}>
+            <footer className="container">
                 <Row>
                     <Col md="6">
                         <p>

@@ -12,18 +12,14 @@ class Index extends React.Component {
 
     constructor(props) {
         super(props);
-
-        this.state = {
-            projects: []
-        };
     }
 
     render() {
         return (
             <Layout>
-                <Row style={{ padding: "75px 0", borderBottom: "dotted 1px #000" }}>
+                <Row id="intro" tag="section">
                     <Col md="4">
-                        <img src={logo} style={{ width: "100%" }} title="'Narcissism' by Nathan Shaw" />
+                        <img src={logo} title="'Narcissism' by Nathan Shaw" />
                     </Col>
                     <Col md="8">
                         <h1 className="display-4">
@@ -41,7 +37,7 @@ class Index extends React.Component {
                             <Col sm="7">
                                 <div className="tab"></div>
                                 <p>
-                                    At the moment I am engaged to ASP.NET Core microservices and exploring GO.<br />
+                                    Currently engaged to ASP.NET Core microservices and exploring GO.<br />
                                     This is my first online portfolio. Feel feel to look around and let me know what you think!
                                     </p>
                             </Col>
@@ -53,9 +49,9 @@ class Index extends React.Component {
                     </Col>
                 </Row>
                 <About />
-                <Skills />
-                <Projects limit="2" projects={this.props.projects} />
-                <Experience />
+                <Skills skills={this.props.skills} />
+                <Projects limit={2} projects={this.props.projects} />
+                <Experience experience={this.props.experience} education={this.props.education} />
             </Layout>
 
         )
@@ -73,9 +69,8 @@ Index.getInitialProps = async function () {
         throw new Error("Failed to get content");
 
     const data = await res.json();
-    const projects = data.projects;
 
-    return {projects};
+    return data;
 }
 
 export default Index;

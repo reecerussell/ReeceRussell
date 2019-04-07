@@ -31,15 +31,17 @@ export default class Layout extends React.Component {
 
         return (
             <div className="background">
-                <Container>
-                    <Head>
-                        <title>{title}</title>
-                    </Head>
+                <Container tag="header">
                     <Row>
                         <Col>
                             <Navbar/>
                         </Col>
                     </Row>
+                </Container>
+                <Container tag="main">
+                    <Head>
+                        <title>{title}</title>
+                    </Head>
 
                     {this.props.children}
 

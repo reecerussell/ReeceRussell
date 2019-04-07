@@ -1,3 +1,41 @@
+#projects {
+    padding: 50px 0;
+    border-top: 1px dotted #000;
+    border-bottom: 1px dotted #000; 
+}
+
+#projects a:not(.btn-source) {
+    color:#000;
+    text-decoration: none;
+}
+
+#projects a:not(.btn-source):hover {
+    color:#000;
+    text-decoration: underline;
+}
+
+#projects img, #projects .project-details {
+    padding-bottom: 15px;
+}
+
+#project {
+    padding: 75px 0 50px 0;
+}
+
+#project img {
+    width: 100%;
+}
+
+#project h1 {
+    margin: 15px 0 30px 0;
+}
+
+#project #projectDescription {
+    margin: 40px 0 0 0;
+}
+
+/* Btn */
+
 .btn-source {
     background-color:transparent;
     color:#000;
@@ -7,6 +45,7 @@
     padding: 8px 18px;
     font-size: 15px;
     animation: none;
+    margin: 2px;
 }
 
 .btn-source:hover {

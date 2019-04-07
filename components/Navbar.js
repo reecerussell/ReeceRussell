@@ -5,7 +5,7 @@ export default class Navbar extends React.Component {
     constructor(props) {
         super(props);
 
-        this.state = {path: null};
+        this.state = {path: ""};
     }
 
     componentDidMount() {
@@ -26,7 +26,7 @@ export default class Navbar extends React.Component {
                     <li>
                         <a href="https://github.com/reecerussell">Github</a>
                     </li>
-                    <li className={(this.state.path === "/projects" ? "active" : "")}>
+                    <li className={(this.state.path.indexOf("/project") > -1 ? "active" : "")}>
                         <a href="/">Almost</a>
                     </li>
                 </ul>

@@ -23,10 +23,8 @@
       "static/chunks/styles.js",
       "static/runtime/main.js"
     ],
-    "/projects": [
+    "/next/dist/pages/_error": [
       "static/runtime/webpack.js",
-      "static/css/styles.chunk.css",
-      "static/chunks/styles.js",
       "static/runtime/main.js"
     ]
   }
