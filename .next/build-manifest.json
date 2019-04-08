@@ -29,6 +29,7 @@
       "static/chunks/styles.a8fd83533b13472958d1.js",
       "static/runtime/main-9c6cd246a1695ac49543.js"
     ],
+<<<<<<< HEAD
     "/projects": [
       "static/runtime/webpack-3b8c5d833895a36694df.js",
       "static/css/commons.375bb27e.chunk.css",
@@ -36,6 +37,11 @@
       "static/css/styles.f3ea4c0a.chunk.css",
       "static/chunks/styles.a8fd83533b13472958d1.js",
       "static/runtime/main-9c6cd246a1695ac49543.js"
+=======
+    "/next/dist/pages/_error": [
+      "static/runtime/webpack.js",
+      "static/runtime/main.js"
+>>>>>>> 92270d5190841662ef176df60562430d803ab0d6
     ]
   }
 }

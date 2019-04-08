@@ -5,7 +5,7 @@ import {Row, Col} from 'reactstrap';
 export default class About extends React.Component {
     render () {
         return (
-            <Row id="about">
+            <Row id="about" tag="section">
                 <Col>
                     <h3>
                         About me

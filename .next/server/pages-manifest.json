@@ -1,1 +1,5 @@
+<<<<<<< HEAD
 {"/_app":"static/4mWjwubHIgBmqb5ZyPoBJ/pages/_app.js","/_error":"static/4mWjwubHIgBmqb5ZyPoBJ/pages/_error.js","/index":"static/4mWjwubHIgBmqb5ZyPoBJ/pages/index.js","/projects":"static/4mWjwubHIgBmqb5ZyPoBJ/pages/projects.js","/_document":"static/4mWjwubHIgBmqb5ZyPoBJ/pages/_document.js","/":"static/4mWjwubHIgBmqb5ZyPoBJ/pages/index.js"}
+=======
+{"/_app":"static/development/pages/_app.js","/_document":"static/development/pages/_document.js","/_error":"static/development/pages/_error.js","/index":"static/development/pages/index.js","/next/dist/pages/_error":"static/development/pages/next/dist/pages/_error.js","/":"static/development/pages/index.js"}
+>>>>>>> 92270d5190841662ef176df60562430d803ab0d6
