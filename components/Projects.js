@@ -2,7 +2,6 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import {Row, Col} from 'reactstrap';
 import '../static/css/projects.css';
-import goreact from "../static/images/goreact.jpg";
 
 class Projects extends React.Component {
     constructor(props) {
@@ -31,7 +30,7 @@ class Projects extends React.Component {
                         <Col md="6" key={key}>
                             <Row>
                                 <Col sm="6">
-                                    <img src={goreact} style={{width:"100%", maxHeight:"300px"}} />
+                                    <img src={process.imageUrl} style={{width:"100%", maxHeight:"300px"}} />
                                 </Col>
                                 <Col sm="6" className="project-details">
                                     <h4>{proj.name}</h4>

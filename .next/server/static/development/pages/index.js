@@ -467,8 +467,8 @@ function (_React$Component) {
       }, "Github")), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("li", {
         className: this.state.path.indexOf("/project") > -1 ? "active" : ""
       }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("a", {
-        href: "/"
-      }, "Almost"))));
+        href: "/projects"
+      }, "Projects"))));
     }
   }]);
 
@@ -501,9 +501,6 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var reactstrap__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(reactstrap__WEBPACK_IMPORTED_MODULE_7__);
 /* harmony import */ var _static_css_projects_css__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../static/css/projects.css */ "./static/css/projects.css");
 /* harmony import */ var _static_css_projects_css__WEBPACK_IMPORTED_MODULE_8___default = /*#__PURE__*/__webpack_require__.n(_static_css_projects_css__WEBPACK_IMPORTED_MODULE_8__);
-/* harmony import */ var _static_images_goreact_jpg__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ../static/images/goreact.jpg */ "./static/images/goreact.jpg");
-/* harmony import */ var _static_images_goreact_jpg__WEBPACK_IMPORTED_MODULE_9___default = /*#__PURE__*/__webpack_require__.n(_static_images_goreact_jpg__WEBPACK_IMPORTED_MODULE_9__);
-
 
 
 
@@ -553,7 +550,7 @@ function (_React$Component) {
         }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_7__["Row"], null, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_7__["Col"], {
           sm: "6"
         }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("img", {
-          src: _static_images_goreact_jpg__WEBPACK_IMPORTED_MODULE_9___default.a,
+          src: process.imageUrl,
           style: {
             width: "100%",
             maxHeight: "300px"
@@ -644,13 +641,21 @@ function (_React$Component) {
   }, {
     key: "render",
     value: function render() {
-      console.log(this.state.skills);
       var content = this.state.skills.length > -1 ? react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_6__["Row"], {
         tag: "section"
-      }) : "";
-      return {
-        content: content
-      };
+      }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_6__["Col"], null, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("h3", null, "Technical skills"), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
+        className: "tab"
+      }), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_6__["Row"], null, this.state.skills.map(function (skillSet, key1) {
+        return react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_6__["Col"], {
+          md: "4",
+          key: key1
+        }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("h4", null, skillSet.title), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("ul", null, skillSet.skills.map(function (skill, key2) {
+          return react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("li", {
+            key: key2
+          }, skill.skill);
+        })));
+      })))) : "";
+      return content;
     }
   }]);
 
@@ -1236,17 +1241,6 @@ _babel_runtime_corejs2_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.mark(f
 
 /***/ }),
 
-/***/ "./static/images/goreact.jpg":
-/*!***********************************!*\
-  !*** ./static/images/goreact.jpg ***!
-  \***********************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = "/_next/static/images/goreact-1d55f22a1a15d13271277ba8ee76dcff.jpg";
-
-/***/ }),
-
 /***/ "./static/images/logo.png":
 /*!********************************!*\
   !*** ./static/images/logo.png ***!
@@ -1265,7 +1259,7 @@ module.exports = "/_next/static/images/logo-f96112308176badeef782cf3e0a318dc.png
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! /Users/reecerussell/Projects/ReeceRussellReact/reecerussell/pages/index.js */"./pages/index.js");
+module.exports = __webpack_require__(/*! D:\Ideas\react25119\pages\index.js */"./pages/index.js");
 
 
 /***/ }),
