@@ -351,7 +351,7 @@ function (_React$Component) {
     key: "componentDidMount",
     value: function componentDidMount() {
       var path = location.pathname;
-      if (path[0] !== '/') path = "/" + path.toLowerCase();
+      if (path[0] !== "/") path = "/" + path.toLowerCase();
       this.setState({
         path: path
       });
@@ -368,10 +368,10 @@ function (_React$Component) {
       }, "Home")), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("li", null, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("a", {
         href: "https://github.com/reecerussell"
       }, "Github")), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("li", {
-        className: this.state.path.indexOf("/project") > -1 ? "active" : ""
+        className: this.state.path === "/tech" ? "active" : ""
       }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("a", {
-        href: "/projects"
-      }, "Projects"))));
+        href: "/tech"
+      }, "Tech"))));
     }
   }]);
 
@@ -391,7 +391,7 @@ function (_React$Component) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* WEBPACK VAR INJECTION */(function(process) {/* harmony import */ var _babel_runtime_corejs2_helpers_esm_classCallCheck__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/classCallCheck */ "./node_modules/@babel/runtime-corejs2/helpers/esm/classCallCheck.js");
+/* harmony import */ var _babel_runtime_corejs2_helpers_esm_classCallCheck__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/classCallCheck */ "./node_modules/@babel/runtime-corejs2/helpers/esm/classCallCheck.js");
 /* harmony import */ var _babel_runtime_corejs2_helpers_esm_createClass__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/createClass */ "./node_modules/@babel/runtime-corejs2/helpers/esm/createClass.js");
 /* harmony import */ var _babel_runtime_corejs2_helpers_esm_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/possibleConstructorReturn */ "./node_modules/@babel/runtime-corejs2/helpers/esm/possibleConstructorReturn.js");
 /* harmony import */ var _babel_runtime_corejs2_helpers_esm_getPrototypeOf__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/getPrototypeOf */ "./node_modules/@babel/runtime-corejs2/helpers/esm/getPrototypeOf.js");
@@ -425,8 +425,9 @@ function (_React$Component) {
 
     _this = Object(_babel_runtime_corejs2_helpers_esm_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_2__["default"])(this, Object(_babel_runtime_corejs2_helpers_esm_getPrototypeOf__WEBPACK_IMPORTED_MODULE_3__["default"])(Projects).call(this, props));
     var projects = [];
+    var projectCount = props.projects === null ? 0 : props.projects.length;
 
-    for (var i = 0; i < Math.min(props.limit, props.projects.length); i++) {
+    for (var i = 0; i < Math.min(props.limit, projectCount); i++) {
       projects.push(props.projects[i]);
     }
 
@@ -452,7 +453,7 @@ function (_React$Component) {
         }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_7__["Row"], null, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_7__["Col"], {
           sm: "6"
         }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("img", {
-          src: process.imageUrl,
+          src: proj.imageUrl,
           style: {
             width: "100%",
             maxHeight: "300px"
@@ -460,7 +461,7 @@ function (_React$Component) {
         })), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_7__["Col"], {
           sm: "6",
           className: "project-details"
-        }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("h4", null, proj.name), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("p", null, proj.description.replace("\n", "<br />")), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("p", null, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("a", {
+        }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("h4", null, proj.name), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("p", null, proj.teaser.replace("\n", "<br />")), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("p", null, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("a", {
           href: proj.githubLink,
           className: "btn-source"
         }, "View Source"), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("span", null, " ", react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("a", {
@@ -484,7 +485,6 @@ Projects.propTypes = {
   projects: prop_types__WEBPACK_IMPORTED_MODULE_6___default.a.array.isRequired
 };
 /* harmony default export */ __webpack_exports__["default"] = (Projects);
-/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./../node_modules/process/browser.js */ "./node_modules/process/browser.js")))
 
 /***/ }),
 
@@ -532,15 +532,6 @@ function (_React$Component) {
   }
 
   Object(_babel_runtime_corejs2_helpers_esm_createClass__WEBPACK_IMPORTED_MODULE_1__["default"])(Skills, [{
-    key: "renderChildren",
-    value: function renderChildren(skills) {
-      {
-        skills.map(function (skill) {
-          return react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("li", null, skill.skill);
-        });
-      }
-    }
-  }, {
     key: "render",
     value: function render() {
       var content = this.state.skills.length > -1 ? react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_6__["Row"], {
@@ -7964,201 +7955,6 @@ Popper.Defaults = Defaults;
 //# sourceMappingURL=popper.js.map
 
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./../../../webpack/buildin/global.js */ "./node_modules/webpack/buildin/global.js")))
-
-/***/ }),
-
-/***/ "./node_modules/process/browser.js":
-/*!*****************************************!*\
-  !*** ./node_modules/process/browser.js ***!
-  \*****************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-// shim for using process in browser
-var process = module.exports = {};
-
-// cached from whatever global is present so that test runners that stub it
-// don't break things.  But we need to wrap it in a try catch in case it is
-// wrapped in strict mode code which doesn't define any globals.  It's inside a
-// function because try/catches deoptimize in certain engines.
-
-var cachedSetTimeout;
-var cachedClearTimeout;
-
-function defaultSetTimout() {
-    throw new Error('setTimeout has not been defined');
-}
-function defaultClearTimeout () {
-    throw new Error('clearTimeout has not been defined');
-}
-(function () {
-    try {
-        if (typeof setTimeout === 'function') {
-            cachedSetTimeout = setTimeout;
-        } else {
-            cachedSetTimeout = defaultSetTimout;
-        }
-    } catch (e) {
-        cachedSetTimeout = defaultSetTimout;
-    }
-    try {
-        if (typeof clearTimeout === 'function') {
-            cachedClearTimeout = clearTimeout;
-        } else {
-            cachedClearTimeout = defaultClearTimeout;
-        }
-    } catch (e) {
-        cachedClearTimeout = defaultClearTimeout;
-    }
-} ())
-function runTimeout(fun) {
-    if (cachedSetTimeout === setTimeout) {
-        //normal enviroments in sane situations
-        return setTimeout(fun, 0);
-    }
-    // if setTimeout wasn't available but was latter defined
-    if ((cachedSetTimeout === defaultSetTimout || !cachedSetTimeout) && setTimeout) {
-        cachedSetTimeout = setTimeout;
-        return setTimeout(fun, 0);
-    }
-    try {
-        // when when somebody has screwed with setTimeout but no I.E. maddness
-        return cachedSetTimeout(fun, 0);
-    } catch(e){
-        try {
-            // When we are in I.E. but the script has been evaled so I.E. doesn't trust the global object when called normally
-            return cachedSetTimeout.call(null, fun, 0);
-        } catch(e){
-            // same as above but when it's a version of I.E. that must have the global object for 'this', hopfully our context correct otherwise it will throw a global error
-            return cachedSetTimeout.call(this, fun, 0);
-        }
-    }
-
-
-}
-function runClearTimeout(marker) {
-    if (cachedClearTimeout === clearTimeout) {
-        //normal enviroments in sane situations
-        return clearTimeout(marker);
-    }
-    // if clearTimeout wasn't available but was latter defined
-    if ((cachedClearTimeout === defaultClearTimeout || !cachedClearTimeout) && clearTimeout) {
-        cachedClearTimeout = clearTimeout;
-        return clearTimeout(marker);
-    }
-    try {
-        // when when somebody has screwed with setTimeout but no I.E. maddness
-        return cachedClearTimeout(marker);
-    } catch (e){
-        try {
-            // When we are in I.E. but the script has been evaled so I.E. doesn't  trust the global object when called normally
-            return cachedClearTimeout.call(null, marker);
-        } catch (e){
-            // same as above but when it's a version of I.E. that must have the global object for 'this', hopfully our context correct otherwise it will throw a global error.
-            // Some versions of I.E. have different rules for clearTimeout vs setTimeout
-            return cachedClearTimeout.call(this, marker);
-        }
-    }
-
-
-
-}
-var queue = [];
-var draining = false;
-var currentQueue;
-var queueIndex = -1;
-
-function cleanUpNextTick() {
-    if (!draining || !currentQueue) {
-        return;
-    }
-    draining = false;
-    if (currentQueue.length) {
-        queue = currentQueue.concat(queue);
-    } else {
-        queueIndex = -1;
-    }
-    if (queue.length) {
-        drainQueue();
-    }
-}
-
-function drainQueue() {
-    if (draining) {
-        return;
-    }
-    var timeout = runTimeout(cleanUpNextTick);
-    draining = true;
-
-    var len = queue.length;
-    while(len) {
-        currentQueue = queue;
-        queue = [];
-        while (++queueIndex < len) {
-            if (currentQueue) {
-                currentQueue[queueIndex].run();
-            }
-        }
-        queueIndex = -1;
-        len = queue.length;
-    }
-    currentQueue = null;
-    draining = false;
-    runClearTimeout(timeout);
-}
-
-process.nextTick = function (fun) {
-    var args = new Array(arguments.length - 1);
-    if (arguments.length > 1) {
-        for (var i = 1; i < arguments.length; i++) {
-            args[i - 1] = arguments[i];
-        }
-    }
-    queue.push(new Item(fun, args));
-    if (queue.length === 1 && !draining) {
-        runTimeout(drainQueue);
-    }
-};
-
-// v8 likes predictible objects
-function Item(fun, array) {
-    this.fun = fun;
-    this.array = array;
-}
-Item.prototype.run = function () {
-    this.fun.apply(null, this.array);
-};
-process.title = 'browser';
-process.browser = true;
-process.env = {};
-process.argv = [];
-process.version = ''; // empty string to avoid regexp issues
-process.versions = {};
-
-function noop() {}
-
-process.on = noop;
-process.addListener = noop;
-process.once = noop;
-process.off = noop;
-process.removeListener = noop;
-process.removeAllListeners = noop;
-process.emit = noop;
-process.prependListener = noop;
-process.prependOnceListener = noop;
-
-process.listeners = function (name) { return [] }
-
-process.binding = function (name) {
-    throw new Error('process.binding is not supported');
-};
-
-process.cwd = function () { return '/' };
-process.chdir = function (dir) {
-    throw new Error('process.chdir is not supported');
-};
-process.umask = function() { return 0; };
-
 
 /***/ }),
 
@@ -20282,12 +20078,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var reactstrap__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! reactstrap */ "./node_modules/reactstrap/es/index.js");
 /* harmony import */ var _components_About__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ../components/About */ "./components/About.js");
 /* harmony import */ var _components_Skills__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ../components/Skills */ "./components/Skills.js");
-/* harmony import */ var _static_images_logo_png__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ../static/images/logo.png */ "./static/images/logo.png");
-/* harmony import */ var _static_images_logo_png__WEBPACK_IMPORTED_MODULE_13___default = /*#__PURE__*/__webpack_require__.n(_static_images_logo_png__WEBPACK_IMPORTED_MODULE_13__);
-/* harmony import */ var _components_Experience__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ../components/Experience */ "./components/Experience.js");
-/* harmony import */ var isomorphic_unfetch__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! isomorphic-unfetch */ "./node_modules/isomorphic-unfetch/browser.js");
-/* harmony import */ var isomorphic_unfetch__WEBPACK_IMPORTED_MODULE_15___default = /*#__PURE__*/__webpack_require__.n(isomorphic_unfetch__WEBPACK_IMPORTED_MODULE_15__);
-
+/* harmony import */ var _components_Experience__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ../components/Experience */ "./components/Experience.js");
+/* harmony import */ var isomorphic_unfetch__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! isomorphic-unfetch */ "./node_modules/isomorphic-unfetch/browser.js");
+/* harmony import */ var isomorphic_unfetch__WEBPACK_IMPORTED_MODULE_14___default = /*#__PURE__*/__webpack_require__.n(isomorphic_unfetch__WEBPACK_IMPORTED_MODULE_14__);
 
 
 
@@ -20322,11 +20115,6 @@ function (_React$Component) {
         id: "intro",
         tag: "section"
       }, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_10__["Col"], {
-        md: "4"
-      }, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("img", {
-        src: _static_images_logo_png__WEBPACK_IMPORTED_MODULE_13___default.a,
-        title: "'Narcissism' by Nathan Shaw"
-      })), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_10__["Col"], {
         md: "8"
       }, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("h1", {
         className: "display-4"
@@ -20340,14 +20128,14 @@ function (_React$Component) {
         sm: "5"
       }, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
         className: "tab"
-      }), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("p", null, "Just a side note, I am an apprentice software developer, working at ", react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("a", {
+      }), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("p", null, "Just a side note, I am an apprentice software developer, working at", " ", react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("a", {
         href: "http://prominentmedia.com"
       }, "Prominent Media"), "."))))), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(_components_About__WEBPACK_IMPORTED_MODULE_11__["default"], null), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(_components_Skills__WEBPACK_IMPORTED_MODULE_12__["default"], {
         skills: this.props.skills
       }), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(_components_Projects__WEBPACK_IMPORTED_MODULE_8__["default"], {
         limit: 2,
         projects: this.props.projects
-      }), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(_components_Experience__WEBPACK_IMPORTED_MODULE_14__["default"], {
+      }), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(_components_Experience__WEBPACK_IMPORTED_MODULE_13__["default"], {
         experience: this.props.experience,
         education: this.props.education
       }));
@@ -20368,7 +20156,7 @@ _babel_runtime_corejs2_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.mark(f
       switch (_context.prev = _context.next) {
         case 0:
           _context.next = 2;
-          return isomorphic_unfetch__WEBPACK_IMPORTED_MODULE_15___default()("https://go.reecerussell.com", {
+          return isomorphic_unfetch__WEBPACK_IMPORTED_MODULE_14___default()("https://go.reecerussell.com", {
             headers: {
               "Requested-By": "reecerussell.com"
             }
@@ -20400,17 +20188,6 @@ _babel_runtime_corejs2_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.mark(f
   }, _callee);
 }));
 /* harmony default export */ __webpack_exports__["default"] = (Index);
-
-/***/ }),
-
-/***/ "./static/images/logo.png":
-/*!********************************!*\
-  !*** ./static/images/logo.png ***!
-  \********************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = "/_next/static/images/logo-f96112308176badeef782cf3e0a318dc.png";
 
 /***/ }),
 

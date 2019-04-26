@@ -189,13 +189,14 @@ footer p.email > a {
     text-decoration: none;
 }
 #about {
-    padding: 50px 0;
+    padding: 50px 0 0 0;
 }
 
 #about h4 {
     font-size: 20px;
     margin-bottom: 15px;
 }
+
 #experience {
     padding: 50px 0;
 }

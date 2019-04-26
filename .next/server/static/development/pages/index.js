@@ -448,7 +448,7 @@ function (_React$Component) {
     key: "componentDidMount",
     value: function componentDidMount() {
       var path = location.pathname;
-      if (path[0] !== '/') path = "/" + path.toLowerCase();
+      if (path[0] !== "/") path = "/" + path.toLowerCase();
       this.setState({
         path: path
       });
@@ -465,10 +465,10 @@ function (_React$Component) {
       }, "Home")), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("li", null, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("a", {
         href: "https://github.com/reecerussell"
       }, "Github")), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("li", {
-        className: this.state.path.indexOf("/project") > -1 ? "active" : ""
+        className: this.state.path === "/tech" ? "active" : ""
       }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("a", {
-        href: "/projects"
-      }, "Projects"))));
+        href: "/tech"
+      }, "Tech"))));
     }
   }]);
 
@@ -523,8 +523,9 @@ function (_React$Component) {
 
     _this = Object(_babel_runtime_corejs2_helpers_esm_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_2__["default"])(this, Object(_babel_runtime_corejs2_helpers_esm_getPrototypeOf__WEBPACK_IMPORTED_MODULE_3__["default"])(Projects).call(this, props));
     var projects = [];
+    var projectCount = props.projects === null ? 0 : props.projects.length;
 
-    for (var i = 0; i < Math.min(props.limit, props.projects.length); i++) {
+    for (var i = 0; i < Math.min(props.limit, projectCount); i++) {
       projects.push(props.projects[i]);
     }
 
@@ -550,7 +551,7 @@ function (_React$Component) {
         }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_7__["Row"], null, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_7__["Col"], {
           sm: "6"
         }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("img", {
-          src: process.imageUrl,
+          src: proj.imageUrl,
           style: {
             width: "100%",
             maxHeight: "300px"
@@ -558,7 +559,7 @@ function (_React$Component) {
         })), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_7__["Col"], {
           sm: "6",
           className: "project-details"
-        }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("h4", null, proj.name), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("p", null, proj.description.replace("\n", "<br />")), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("p", null, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("a", {
+        }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("h4", null, proj.name), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("p", null, proj.teaser.replace("\n", "<br />")), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("p", null, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("a", {
           href: proj.githubLink,
           className: "btn-source"
         }, "View Source"), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("span", null, " ", react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("a", {
@@ -630,15 +631,6 @@ function (_React$Component) {
   }
 
   Object(_babel_runtime_corejs2_helpers_esm_createClass__WEBPACK_IMPORTED_MODULE_1__["default"])(Skills, [{
-    key: "renderChildren",
-    value: function renderChildren(skills) {
-      {
-        skills.map(function (skill) {
-          return react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("li", null, skill.skill);
-        });
-      }
-    }
-  }, {
     key: "render",
     value: function render() {
       var content = this.state.skills.length > -1 ? react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_6__["Row"], {
@@ -1054,12 +1046,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var reactstrap__WEBPACK_IMPORTED_MODULE_10___default = /*#__PURE__*/__webpack_require__.n(reactstrap__WEBPACK_IMPORTED_MODULE_10__);
 /* harmony import */ var _components_About__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ../components/About */ "./components/About.js");
 /* harmony import */ var _components_Skills__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ../components/Skills */ "./components/Skills.js");
-/* harmony import */ var _static_images_logo_png__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ../static/images/logo.png */ "./static/images/logo.png");
-/* harmony import */ var _static_images_logo_png__WEBPACK_IMPORTED_MODULE_13___default = /*#__PURE__*/__webpack_require__.n(_static_images_logo_png__WEBPACK_IMPORTED_MODULE_13__);
-/* harmony import */ var _components_Experience__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ../components/Experience */ "./components/Experience.js");
-/* harmony import */ var isomorphic_unfetch__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! isomorphic-unfetch */ "isomorphic-unfetch");
-/* harmony import */ var isomorphic_unfetch__WEBPACK_IMPORTED_MODULE_15___default = /*#__PURE__*/__webpack_require__.n(isomorphic_unfetch__WEBPACK_IMPORTED_MODULE_15__);
-
+/* harmony import */ var _components_Experience__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ../components/Experience */ "./components/Experience.js");
+/* harmony import */ var isomorphic_unfetch__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! isomorphic-unfetch */ "isomorphic-unfetch");
+/* harmony import */ var isomorphic_unfetch__WEBPACK_IMPORTED_MODULE_14___default = /*#__PURE__*/__webpack_require__.n(isomorphic_unfetch__WEBPACK_IMPORTED_MODULE_14__);
 
 
 
@@ -1094,11 +1083,6 @@ function (_React$Component) {
         id: "intro",
         tag: "section"
       }, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_10__["Col"], {
-        md: "4"
-      }, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("img", {
-        src: _static_images_logo_png__WEBPACK_IMPORTED_MODULE_13___default.a,
-        title: "'Narcissism' by Nathan Shaw"
-      })), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_10__["Col"], {
         md: "8"
       }, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("h1", {
         className: "display-4"
@@ -1112,14 +1096,14 @@ function (_React$Component) {
         sm: "5"
       }, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
         className: "tab"
-      }), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("p", null, "Just a side note, I am an apprentice software developer, working at ", react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("a", {
+      }), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("p", null, "Just a side note, I am an apprentice software developer, working at", " ", react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("a", {
         href: "http://prominentmedia.com"
       }, "Prominent Media"), "."))))), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(_components_About__WEBPACK_IMPORTED_MODULE_11__["default"], null), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(_components_Skills__WEBPACK_IMPORTED_MODULE_12__["default"], {
         skills: this.props.skills
       }), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(_components_Projects__WEBPACK_IMPORTED_MODULE_8__["default"], {
         limit: 2,
         projects: this.props.projects
-      }), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(_components_Experience__WEBPACK_IMPORTED_MODULE_14__["default"], {
+      }), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(_components_Experience__WEBPACK_IMPORTED_MODULE_13__["default"], {
         experience: this.props.experience,
         education: this.props.education
       }));
@@ -1140,7 +1124,7 @@ _babel_runtime_corejs2_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.mark(f
       switch (_context.prev = _context.next) {
         case 0:
           _context.next = 2;
-          return isomorphic_unfetch__WEBPACK_IMPORTED_MODULE_15___default()("https://go.reecerussell.com", {
+          return isomorphic_unfetch__WEBPACK_IMPORTED_MODULE_14___default()("https://go.reecerussell.com", {
             headers: {
               "Requested-By": "reecerussell.com"
             }
@@ -1238,17 +1222,6 @@ _babel_runtime_corejs2_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.mark(f
 /***/ (function(module, exports) {
 
 
-
-/***/ }),
-
-/***/ "./static/images/logo.png":
-/*!********************************!*\
-  !*** ./static/images/logo.png ***!
-  \********************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = "/_next/static/images/logo-f96112308176badeef782cf3e0a318dc.png";
 
 /***/ }),
 
