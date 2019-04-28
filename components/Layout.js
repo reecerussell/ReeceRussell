@@ -3,10 +3,8 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import '../static/css/index.css';
 import { Container, Row, Col } from 'reactstrap';
 import Head from 'next/head';
-import { NextScript } from 'next/document'
 import Navbar from './Navbar';
 import Footer from './Footer';
-import googleAnalytics from '../static/js/googleAnalytics'
 
 export default class Layout extends React.Component {
     constructor(props) {
@@ -58,9 +56,6 @@ export default class Layout extends React.Component {
 
                 </Container>
                 <Footer />
-                <script async src="https://www.googletagmanager.com/gtag/js?id=UA-103830912-1"></script>
-                <script src={googleAnalytics}></script>
-                <NextScript />
             </div>
         );
     }
