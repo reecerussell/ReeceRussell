@@ -1,4 +1,2 @@
-.next/static/webpack/
-node_modules/.cache
-node_modules/.bin
+
 rr.zip
