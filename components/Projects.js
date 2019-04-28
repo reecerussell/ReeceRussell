@@ -94,7 +94,7 @@ Projects.defaultProps = {
 
 Projects.propTypes = {
     limit: PropTypes.number,
-    projects: PropTypes.array.isRequired,
+    projects: PropTypes.array,
 };
 
 export default Projects;

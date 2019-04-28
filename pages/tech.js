@@ -1,9 +1,10 @@
 import { Row, Col } from "reactstrap";
 import Layout from "../components/Layout";
+import "../static/css/tech.css";
 
-const Tech = props => (
+const Tech = _ => (
     <Layout>
-        <Row tag="section">
+        <Row tag="section" id="tech">
             <Col md={{ offset: "3", size: "6" }}>
                 <h1 className="display-4 text-center">Tech Stack</h1>
                 <div
@@ -55,6 +56,18 @@ const Tech = props => (
                         grown to love it! The syntax and how to do things in
                         general are quite different to what I'm used to but I
                         really enjoyed it.
+                    </p>
+                    <p>
+                        As I designed the backend as a RESTful API, it needed
+                        some form of authentication. For this I created a
+                        service for JSON web tokens (JWT), using ASP.NET Core
+                        and Identity v3 - JWT works nicely with almost anything
+                        so it tied in quite nice for the backend.
+                    </p>
+                    <p>
+                        The data is all stored using Microsoft SQL Server
+                        Express, which has been a nice, yet interesting, change
+                        from MySql.
                     </p>
                     <h4>More</h4>
                     <p>
