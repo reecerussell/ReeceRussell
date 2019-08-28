@@ -1,0 +1,14 @@
+.skill {
+    svg.fa-star {
+        color: rgba(0, 0, 0, 0.6);
+
+        &.checked {
+            color: #fdfd96;
+        }
+    }
+
+    .modal-content {
+        border: 0;
+        border-radius: 0;
+    }
+}
