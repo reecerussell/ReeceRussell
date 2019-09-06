@@ -10,15 +10,8 @@ app.prepare()
     .then(() => {
         const server = express();
 
-        server.get("/tech", (req, res) => {
-            return app.render(req, res, "/tech", req.query);
-        });
-
-        server.get("/project/:id/:slug", (req, res) => {
-            return app.render(req, res, "/project", {
-                id: req.params.id,
-                slug: req.params.slug,
-            });
+        server.get("/stack", (req, res) => {
+            return app.render(req, res, "/soon", req.query);
         });
 
         server.get("*", (req, res) => {

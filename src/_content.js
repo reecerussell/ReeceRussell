@@ -20,16 +20,16 @@ export default {
     intro: {
         greeting: "Hi",
         tagLine:
-            "Welcome to my portfolio! I am a software developer, based in Milton Keynes.",
+            "My name is Reece and I am a software developer based in Milton Keynes.",
         sideNote:
             'Just a side note, I am an apprentice software developer, working at <a href="http://prominentmedia.com">Prominent Media</a>.',
         mainNote:
-            "Currently engaged to ASP.NET Core microservices and exploring GO.<br />This is my first online portfolio. Feel feel to look around and let me know what you think!",
+            "I spend my time writing services which I'll never use, configuring servers that I'll never use and learning technologies that interest me.",
     },
     about: {
         header: "About Me",
         content:
-            "I am an apprentice software developer at a small company called Prominent Media while studying software development. My primary focus is on ASP.NET web applications, working with C# and SQL. From time to time, I explore the realms of Xamarin and working with web sockets and restful APIs. However, ASP.NET Core is my current obsession.",
+            "I'm an apprentice software developer at a small company called Prominent Media. I'm currently studying software language and development methodologies as part of my apprenticeship. My main focus is in C#.NET driven web applications, such as, WebForms, MVC and WebAPI. I have brief experience messing around with Xamarin and mobile development, however, I found that my real interest lies with web development but more in the direction of software infratructure, microservices and Golang.",
     },
     experience: {
         work: {
@@ -76,43 +76,48 @@ export default {
                 stars: 4,
                 icon: "",
                 description:
-                    "Microsoft certified technical associate in HTML5, CSS3 and JavaScript.",
+                    "I started learning HTML 5 years ago and since become a Microsoft Technical Associate in HTML5, CSS3 and JavaScript.",
             },
             {
                 title: "ReactJS/JavaScript",
                 stars: 3,
                 icon: "",
-                description: "",
+                description:
+                    "JavaScript was the first programming language I learnt, back when I was 13. Now I have written JavaScript and React for production applications; I am also slowly exporing Node, for APIs and rendering React serverside.",
             },
             {
                 title: "C#",
                 stars: 4,
                 icon: "",
-                description: "",
+                description:
+                    "I am highly proficient in C#, using it on a daily basis for web applications, including: Web Forms, MVC and WebApi2.",
             },
             {
                 title: "SQL/MySql",
                 stars: 3,
                 icon: "",
-                description: "",
+                description:
+                    "I originally started with SQL Server, using Entity Framework in .NET; although, I have more experience writing queries for MySql.",
             },
             {
                 title: "Golang",
                 stars: 2,
                 icon: "",
-                description: "",
+                description: "I love it; I'm also learning it.",
             },
             {
                 title: "Docker",
                 stars: 1,
                 icon: "",
-                description: "",
+                description:
+                    "I'm in the learning process.<br />I've been using Docker Compose to build microservices, however, once I become more compitent in using it, I will be moving to using Kubernetes.",
             },
             {
                 title: "Git",
                 stars: 2,
                 icon: "",
-                description: "",
+                description:
+                    "It's better than SVN.<br />I learnt the basic of Git while working on a college project; now use it for my own personal projects. There's still more to learn!",
             },
         ],
     },
@@ -123,7 +128,7 @@ export default {
                 name: "OpenGateway",
                 teaser: "An open-source api gateway written in Go.",
                 description:
-                    "<p><b>PLANNING</b></p><p>OpenGateway will be an API gateway tool used to route http request to specific endpoints - usually microservices, using docker's internal dns.</p><p>The plan is to write the application in Golang using SqlServer or other RDB.</p>",
+                    "<p><b>PLANNING</b></p><p>OpenGateway will be an API gateway tool used to route http requests to specific internal endpoints - usually microservices, using docker's internal dns.</p><p>The plan is to write the application in Golang using SqlServer or another RDB.</p>",
                 imageUrl:
                     "https://static.allcloud.com/assets/images/blog/golang.png",
                 githubUrl: "https://github.com/reecerussell/opengateway",
