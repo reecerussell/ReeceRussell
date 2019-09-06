@@ -1,5 +1,7 @@
 FROM node:10-alpine
 
+ENV NODE_ENV=production
+
 RUN mkdir -p /home/node/reecerussell/node_modules
 
 WORKDIR /home/node/reecerussell
