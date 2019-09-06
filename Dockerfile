@@ -9,6 +9,8 @@ WORKDIR /home/node/reecerussell
 
 COPY . ./
 
+RUN npm config set registry http://registry.npmjs.org/
+
 RUN npm install && npm audit fix
 
 EXPOSE 80
