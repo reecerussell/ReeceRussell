@@ -18,7 +18,7 @@ app.prepare()
             return handle(req, res, "/", req.query);
         });
 
-        server.listen(port, err => {
+        server.listen(port, "0.0.0.0", err => {
             if (err) throw err;
             console.log("> Ready on http://localhost:" + port);
         });
