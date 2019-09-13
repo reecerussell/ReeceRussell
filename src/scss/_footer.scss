@@ -1,0 +1,18 @@
+footer {
+    background-color: #000;
+    color: #fff;
+
+    p {
+        margin: 0;
+        padding: 5px;
+
+        &.email {
+            text-align: right;
+
+            & > a {
+                color: #fff;
+                text-decoration: none;
+            }
+        }
+    }
+}

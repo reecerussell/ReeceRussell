@@ -1,0 +1,51 @@
+@import "~bootstrap/scss/bootstrap.scss";
+@import "variables";
+@import "fonts";
+@import "modal";
+
+@import "navbar";
+@import "intro";
+@import "about";
+@import "projects";
+@import "experience";
+@import "skill";
+@import "footer";
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "Source Code Pro", monospace;
+}
+
+.background {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    left: 20px;
+    margin-bottom: 20px;
+    width: calc(100% - 40px);
+    background-color: $background-color;
+}
+
+.tab {
+    position: relative;
+    top: -5px;
+    height: 3px;
+    width: 10px;
+    background-color: #000;
+}
+
+a {
+    color: #000;
+    text-decoration: underline;
+}
+
+section.row {
+    padding: 50px 0;
+    padding-bottom: 1px dotted #000;
+}
+
+section.row:last-of-type {
+    padding-bottom: 0;
+}

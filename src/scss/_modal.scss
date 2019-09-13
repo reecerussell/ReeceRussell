@@ -1,0 +1,12 @@
+.modal-content {
+    border: 0;
+    border-radius: 0;
+    padding: 20px;
+    background-color: #fff;
+
+    .modal-header,
+    .modal-body,
+    .modal-footer {
+        background-color: $background-color;
+    }
+}
