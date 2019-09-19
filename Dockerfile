@@ -10,6 +10,7 @@ WORKDIR /home/node/reecerussell
 COPY . ./
 
 RUN npm install && npm audit fix
+RUN npm rebuild node-sass
 
 EXPOSE 80
 
