@@ -3,20 +3,27 @@ version: "3.2"
 services:
     web:
         image: reecerussell/website
+        command: --tls-cert=/run/secrets/cert.pem --tls-key=/run/secrets/key.pem
         build:
             context: .
             dockerfile: Dockerfile
         ports:
             - "80:80"
             - "443:80"
+        environment:
+            METADATA: end-to-end-TLS
         deploy:
             replicas: 1
             labels:
-                com.docker.lb.hosts: reecerussell.com
-                com.docker.lb.network: reecerussell
-                com.docker.lb.port: 80
-                com.docker.lb.ssl_cert: reecerussell_reecerussell.cert
-                com.docker.lb.ssl_key: reecerussell_reecerussell.key
+                com.docker.lb.hosts: reecerussell
+                com.docker.lb.network: demo-network
+                com.docker.lb.port: 8080
+                com.docker.lb.ssl_passthrough: "true"
+        secrets:
+            - source: reecerussell.cert
+              target: /run/secrets/cert.pem
+            - source: reecerussell.key
+              target: /run/secrets/key.pem
         networks:
             - reecerussell
 
