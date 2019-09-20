@@ -1,31 +1,31 @@
-version "3.2"
+version: "3.2"
 
 services:
-  web:
-    image: reecerussell/website
-    build:
-      context: .
-      dockerfile: Dockerfile
-    ports:
-     - "80:80"
-     - "443:80"
-    deploy:
-      replicas: 1
-      labels:
-        com.docker.lb.hosts: reecerussell.com
-        com.docker.lb.network: reecerussell
-        com.docker.lb.port: 80
-        com.docker.lb.ssl_cert: reecerussell.cert
-        com.docker.lb.ssl_key: reecerussell.key
-    networks:
-      - reecerussell
+    web:
+        image: reecerussell/website
+        build:
+            context: .
+            dockerfile: Dockerfile
+        ports:
+            - "80:80"
+            - "443:80"
+        deploy:
+            replicas: 1
+            labels:
+                com.docker.lb.hosts: reecerussell.com
+                com.docker.lb.network: reecerussell
+                com.docker.lb.port: 80
+                com.docker.lb.ssl_cert: reecerussell.cert
+                com.docker.lb.ssl_key: reecerussell.key
+        networks:
+            - reecerussell
 
-networks: 
-  reecerussell:
-    driver: overlay
+networks:
+    reecerussell:
+        driver: overlay
 
 secrets:
-  reecerussell.cert:
-    file: ./reecerussell.cert
-  reecerussell.key:
-    file: ./reecerussell.key
+    reecerussell.cert:
+        file: ./reecerussell.cert
+    reecerussell.key:
+        file: ./reecerussell.key
