@@ -8,8 +8,8 @@ services:
             context: .
             dockerfile: Dockerfile
         ports:
-            - "80:80"
-            - "443:80"
+            - 80:80
+            - 443:80
         environment:
             METADATA: end-to-end-TLS
         deploy:
