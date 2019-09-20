@@ -15,8 +15,8 @@ services:
                 com.docker.lb.hosts: reecerussell.com
                 com.docker.lb.network: reecerussell
                 com.docker.lb.port: 80
-                com.docker.lb.ssl_cert: reecerussell.cert
-                com.docker.lb.ssl_key: reecerussell.key
+                com.docker.lb.ssl_cert: reecerussell_reecerussell.cert
+                com.docker.lb.ssl_key: reecerussell_reecerussell.key
         networks:
             - reecerussell
 
